@@ -1,0 +1,47 @@
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 33vw;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.logo{
+    height: 10vh;
+}
+
+.header-menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap:4vw;
+}
+
+.header-menu >li{
+    list-style: none;
+
+}
+.contacts-h{
+    color: #021731;
+}
+
+.header-menu >li > a{
+    color: #566f8e;
+}
+.footer-c{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75vw;
+}
+.footer-sn{
+    display: flex;
+    gap:1em;
+
+}
+.footer-sn-item{
+    width: 2em;
+}
+

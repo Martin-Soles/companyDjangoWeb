@@ -1,0 +1,184 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'styles/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/general.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/HF.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/media.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/swiper.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <figure class="logo">
+            <img src="{% static 'images/something.png' %}">
+        </figure>
+        <div>
+            <div class="burger-menu-cover">
+                <span class="burger-menu-bar">
+
+                </span>
+                <span class="burger-menu-bar">
+                    
+                </span>
+                <span class="burger-menu-bar">
+                    
+                </span>
+            </div>
+            <menu class="header-menu">
+                <li>
+                    <a href="#services">Kdo jsme</a>
+                </li>
+
+                <li>
+                    <a href="#offerts">Služby</a>
+                </li>
+
+                <li>
+                    <a href="#references">Reference</a>
+                </li>
+
+                <li>
+                    <a href="#footer">Kontakty</a>
+                </li>
+            </menu>
+        </div>
+
+
+
+    </header>
+
+    <section class="front">
+        <h1>
+            Náš skvělý název
+        </h1>
+        <figure class="front-img">
+            <img src="{% static 'images/home_page_pc.png' %}">
+        </figure>
+    </section>
+    <section class="services" id="services">
+        <h2 class="services-h">
+            Proč design severu
+        </h2>
+        <div class="services-cards">
+            <div class="services-cards-item">
+                <figure class="service-cards-img">
+                    <img src="{% static 'images/something.png' %}">
+                </figure>
+                <h3 class="services-cards-item-h">Individuální přístup a flexibilita</h3>
+                <p class="services-card-text">Společně s vámi dotáhneme váš projekt k
+                    dokonalosti. Nabízíme přímou komunikaci a
+                    možnost provádět změny i během práce, což
+                    zaručuje, že výsledek bude odpovídat vašim
+                    představám.
+                </p>
+            </div>
+
+            <div class="services-cards-item">
+                <figure class="service-cards-img">
+                    <img src="{% static 'images/something.png' %}">
+                </figure>
+                <h3 class="services-cards-item-h">Kvalita za férovou cenu</h3>
+                <p class="services-card-text">Poskytujeme vyvážený poměr mezi cenou,
+                    kvalitou a rychlostí dodání. Váš projekt
+                    dokončíme v dohodnutém termínu bez
+                    kompromisů na kvalitě.
+                </p>
+            </div>
+            <div class="services-cards-item">
+                <figure class="service-cards-img">
+                    <img src="{% static 'images/something.png' %}">
+                </figure>
+                <h3 class="services-cards-item-h">Cílevědomost a neustálý růst</h3>
+                <p class="services-card-text">Neustále se učíme, zlepšujeme a hledáme
+                    nejlepší řešení pro vaše potřeby. Naším cílem je
+                    nejen splnit, ale i překonat vaše očekávání.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="offerts" id="offerts">
+        <h2 class="offerts-h" >
+            Naše služby
+        </h2>
+
+        <div class="offerts-cards">
+            <div class="offerts-cards-item">
+                <figure class="offerts-cards-img">
+                    <img src="{% static 'images/something.png' %}">
+                </figure>
+                <div class="offerts-cards-footer">
+                    <h3 class="offerts-cards-item-h">Tvorba webů</h3>
+                    <p class="offerts-card-text">Moderní a intuitivní weby s důrazem na
+                        jednoduchost a atraktivní design, které vaši
+                        zákazníci ocení
+                    </p>
+                </div>
+            </div>
+
+            <div class="offerts-cards-item">
+                <figure class="offerts-cards-img">
+                    <img src="{% static 'images/something.png' %}">
+                </figure>
+                <div class="offerts-cards-footer">
+                    <h3 class="offerts-cards-item-h">Design</h3>
+                    <p class="offerts-card-text">Stylizované logo, bannery i plakáty s moderním a
+                        čistým designem na míru vašim potřebám.
+                    </p>
+                </div>
+            </div>
+
+            <div class="offerts-cards-item">
+                <figure class="offerts-cards-img">
+                    <img src="{% static 'images/something.png' %}">
+                </figure>
+                <div class="offerts-cards-footer">
+                    <h3 class="offerts-cards-item-h">Správa sociálních sítí</h3>
+                    <p class="offerts-card-text">Efektivní správa zaměřená na oslovení mladší
+                        generace, s flexibilním obsahem v podobě
+                        příspěvků a videí dle vašich požadavků.</p>
+                </div>
+            </div>
+    </section>
+    <section class="references" id="references">
+        <h2 class="references-h">
+            Reference
+        </h2>
+
+        <div class="swiper-box">
+            <div class="swiper swiper-button"><div class="swiper-button-prev"></div></div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        {% for x in images %}
+                            <div class="swiper-slide"><img class="wrapper-img" src="/gImages/{{x.path}}"></div>
+                        {% endfor %}
+                    </div>
+                <div class="swiper-pagination"></div>       
+            </div>
+            <div class="swiper swiper-button"><div class="swiper-button-next"></div></div>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+        <h2 class="contacts-h">Kontakty</h2>
+        <ul class="footer-c">
+            <li> Email: </li>
+            <li>Telefon</li>
+
+            <ul class="footer-sn">
+                <li class="footer-sn-item"><img src="{% static 'images/something.png' %}"></li>
+                <li class="footer-sn-item"><img src="{% static 'images/something.png' %}"></li>
+                <li class="footer-sn-item"><img src="{% static 'images/something.png' %}"></li>
+            </ul>
+        </ul>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{% static 'scripts/swiper.js' %}></script>
+</body>
+</html>

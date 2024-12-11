@@ -1,3 +1,4 @@
+import os
 """
 Django settings for companyDjangoWeb project.
 
@@ -25,7 +26,7 @@ SECRET_KEY = "django-insecure-919-5o$eyms@@_-y^2ugfb$j53bkf9((-la)m#0xz^^pv*94rf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
